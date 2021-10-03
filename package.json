@@ -1,0 +1,14 @@
+{
+  "name": "kakakakak",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node run.js index.html"
+  },
+  "devDependencies": {
+    "@types/kakao-js-sdk": "^1.39.1",
+    "serve-handler": "^6.1.3",
+    "typescript": "^4.4.3"
+  }
+}
