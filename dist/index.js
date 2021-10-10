@@ -1,15 +1,17 @@
 import AppContainer from './components/AppContainer.js';
 import KakaoSDK from './components/KakaoSDK.js';
-function initializeDom() {
+import GoogleSDK from './components/GoogleSDK.js';
+function initializeDom(component) {
     const containerEl = new AppContainer();
     containerEl.setAttribute('container-width', '360');
     containerEl.setAttribute('container-height', '360');
-    const kakaoSdkEl = new KakaoSDK();
-    containerEl.appendChild(kakaoSdkEl);
+    containerEl.appendChild(component);
     return containerEl;
 }
 function App() {
-    const el = initializeDom();
-    document.body.appendChild(el);
+    const kakaoContainer = initializeDom(new KakaoSDK());
+    const googleContainer = initializeDom(new GoogleSDK());
+    document.body.appendChild(kakaoContainer);
+    document.body.appendChild(googleContainer);
 }
 window.onload = () => { App(); };
